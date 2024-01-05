@@ -1,4 +1,6 @@
-En este juego de aventuras RPG, te sumergirás en un mundo lleno de desafíos, monstruos y decisiones estratégicas. El objetivo principal es acumular experiencia (XP) y oro para mejorar tu equipo y habilidades. A continuación, se explica brevemente de qué se trata el juego:
+En este juego de aventuras RPG, te sumergirás en un mundo lleno de desafíos, monstruos y decisiones estratégicas. 
+El objetivo principal es acumular experiencia (XP) y oro para mejorar tu equipo y habilidades. 
+A continuación, se explica brevemente de qué se trata el juego:
 
 Estado del Jugador:
 XP: Representa tu progreso en el juego. Gánala derrotando monstruos.
@@ -26,7 +28,8 @@ Consejos:
 Administra cuidadosamente tu oro y salud.
 Mejora tu equipo para enfrentar monstruos más fuertes.
 ¡Explora todas las opciones y descubre los secretos del juego!
-¡Prepárate para una emocionante aventura llena de decisiones estratégicas y desafíos! ¿Serás capaz de derrotar al dragón y ganar el juego? ¡Buena suerte, aventurero! 🏹🐉💰
+¡Prepárate para una emocionante aventura llena de decisiones estratégicas y desafíos! 
+¿Serás capaz de derrotar al dragón y ganar el juego? ¡Buena suerte, aventurero! 🏹🐉💰
 
 Comandos del Juego
 Botón 1: Acción principal

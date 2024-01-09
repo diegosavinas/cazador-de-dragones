@@ -25,12 +25,12 @@ const weapons = [
 ];
 const monsters = [
   {
-    name: "Lagarto",
+    name: "Minotauro",
     level: 4,
-    health: 45
+    health: 40
   },
   {
-    name: "Minotauro",
+    name: "Lagarto",
     level: 8,
     health: 60
   },
@@ -57,7 +57,7 @@ const locations = [
   },
   {
     name: "cave",
-    "button text": ["Ataca al Lagarto 💥", "Ataca al Minotauro 💥", "Ir a la plaza 🏛️"],
+    "button text": ["Ataca al Minotauro 💥", "Ataca al Lagarto 💥", "Ir a la plaza 🏛️"],
     "button functions": [fightSlime, fightBeast, goTown],
     text: "Entraste a la cueva 🏔️. Encontraste varios monstruos 😱🗿🐮.",
     imageUrl: "/img/3. Cueva.jpg"
@@ -66,15 +66,15 @@ const locations = [
     name: "fight",
     "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
     "button functions": [attack, dodge, goTown],
-    text: "Estas peleando con el Lagarto 💥 Ten mucho cuidado.",
-    imageUrl: "/img/4. Monstruos.jpg"
+    text: "Estas peleando con el Minotauro 🐮 Ten mucho cuidado.",
+    imageUrl: "/img/9. Minotauro.jpg"
   },
   {
     name: "kill monster",
     "button text": ["Ir a la plaza 🏛️", "Ir a la plaza 🏛️", "Ir a la plaza 🏛️"],
     "button functions": [goTown, goTown, easterEgg],
     text: 'El mounstro grita "Aaaaaarg!" y muere☠️. Ganaste puntos de experiencia y encontraste oro 🟡.',
-    imageUrl: "/img/5. Monstruo pierde.jpg"
+    imageUrl: "/img/11. Victorious.jpg"
   },
   {
     name: "lose",
@@ -105,11 +105,11 @@ const locations = [
     imageUrl: "/img/8. Dragon.jpg"
   },
   {
-    name: "fight minotauro",
+    name: "fight Lagarto",
     "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
     "button functions": [attack, dodge, goTown],
-    text: "Estas peleando con el minotauro 🐮 Ten mucho cuidado!",
-    imageUrl: "/img/9. Minotauro.jpg"
+    text: "Estas peleando con el Lagarto  Ten mucho cuidado!",
+    imageUrl: "/img/4. Monstruos.jpg"
   }
 ];
 

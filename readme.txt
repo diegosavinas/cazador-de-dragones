@@ -48,8 +48,8 @@ Comprar arma (30 oro)
 Ir a la plaza 🏛️
 3. Cueva
 Opciones:
-Atacar al Golem ⚡
 Atacar al Minotauro ⚡
+Atacar al Lagarto ⚡
 Ir a la plaza 🏛️
 4. Combate
 Opciones:

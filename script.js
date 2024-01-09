@@ -16,6 +16,7 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+
 const weapons = [
   { name: 'palo', power: 5 },
   { name: ' daga', power: 30 },
@@ -24,17 +25,17 @@ const weapons = [
 ];
 const monsters = [
   {
-    name: "golem",
-    level: 2,
-    health: 15
+    name: "Minotauro",
+    level: 4,
+    health: 40
   },
   {
-    name: "minotauro",
+    name: "Lagarto",
     level: 8,
     health: 60
   },
   {
-    name: "dragon",
+    name: "Dragón",
     level: 20,
     health: 300
   }
@@ -42,51 +43,73 @@ const monsters = [
 const locations = [
   {
     name: "town square",
-    "button text": ["Ir a la tienda 🏚️", "Ir a la cueva 🏔️", "Ataca al dragon ⚡"],
+    "button text": ["Ir a la tienda 🏚️", "Ir a la cueva 🏔️", "Ataca al dragon 🐲"],
     "button functions": [goStore, goCave, fightDragon],
-    text: "Estas en la plaza 🏛️. Ves un letrero que dice: \"Tienda\"."
+    text: "Estas en la plaza 🏛️. Ves un letrero que dice: \"Tienda\".",
+    imageUrl: "/img/1. Square.jpg"
   },
   {
     name: "store",
     "button text": ["Compra 10 salud (10 oro)", "Compra arma (30 oro)", "Ir a la plaza 🏛️"],
     "button functions": [buyHealth, buyWeapon, goTown],
-    text: "Entraste a la tienda 🏚️. Compra salud o armas."
+    text: "Entraste a la tienda 🏚️. Compra salud o armas.",
+    imageUrl: "/img/2. Store.jpg"
   },
   {
     name: "cave",
-    "button text": ["Ataca al Golem ⚡", "Ataca al Minotauro ⚡", "Ir a la plaza 🏛️"],
+    "button text": ["Ataca al Minotauro 💥", "Ataca al Lagarto 💥", "Ir a la plaza 🏛️"],
     "button functions": [fightSlime, fightBeast, goTown],
-    text: "Entraste a la cueva 🏔️. Ves algunos monstruos 😱🗿🐮."
+    text: "Entraste a la cueva 🏔️. Encontraste varios monstruos 😱🗿🐮.",
+    imageUrl: "/img/3. Cueva.jpg"
   },
   {
     name: "fight",
-    "button text": ["Ataca ⚡", "Esquiva 🕺", "Corre 🏃"],
+    "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
     "button functions": [attack, dodge, goTown],
-    text: "Estas peleando con el monstruo 💥."
+    text: "Estas peleando con el Minotauro 🐮 Ten mucho cuidado.",
+    imageUrl: "/img/9. Minotauro.jpg"
   },
   {
     name: "kill monster",
     "button text": ["Ir a la plaza 🏛️", "Ir a la plaza 🏛️", "Ir a la plaza 🏛️"],
     "button functions": [goTown, goTown, easterEgg],
-    text: 'El mounstro grita "Aaaaaarg!" y muere☠️. Ganaste puntos de experiencia y encontraste oro 🟡.'
+    text: 'El mounstro grita "Aaaaaarg!" y muere☠️. Ganaste puntos de experiencia y encontraste oro 🟡.',
+    imageUrl: "/img/11. Victorious.jpg"
   },
   {
     name: "lose",
     "button text": ["REPETIR?", "REPETIR?", "REPETIR?"],
     "button functions": [restart, restart, restart],
-    text: "Estás muerto. ☠️"
+    text: "Estás muerto. ☠️",
+    imageUrl: "/img/6. Muerto.jpg"
   },
   { 
     name: "win", 
     "button text": ["REPETIR?", "REPETIR?", "REPETIR?"], 
     "button functions": [restart, restart, restart], 
-    text: "Mataste al dragón! 🐲☠️ GANASTE EL JUEGO! 🥳🎉🍺🏆💯👑" 
+    text: "Mataste al dragón! 🐲☠️ GANASTE EL JUEGO! 🥳🎉🍺🏆💯👑",
+    imageUrl: "/img/10. Ganaste.jpg" 
   },
   {
     name: "easter egg",
     "button text": ["2", "8", "Ir a la plaza? 🏛️"],
     "button functions": [pickTwo, pickEight, goTown],
-    text: "Encontraste un juego secreto 🔐🔑. Elige un número arriba. Serán escogidos al azar 10 numeros entre 0 y 10. Si el número que elegiste coincide con alguno de los numeros al azar, tu ganas!"
+    text: "Encontraste un juego secreto 🔐🔑. Elige un número arriba. Serán escogidos al azar 10 numeros entre 0 y 10. Si el número que elegiste coincide con alguno de los numeros al azar, tu ganas! De lo contrario pierdes 10 de salud",
+    imageUrl: "/img/7. Azar.jpg"
+  },
+  {
+    name: "fight dragon",
+    "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
+    "button functions": [attack, dodge, goTown],
+    text: "Estas peleando con el dragón 🐲 Ten mucho cuidado!",
+    imageUrl: "/img/8. Dragon.jpg"
+  },
+  {
+    name: "fight Lagarto",
+    "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
+    "button functions": [attack, dodge, goTown],
+    text: "Estas peleando con el Lagarto  Ten mucho cuidado!",
+    imageUrl: "/img/4. Monstruos.jpg"
   }
 ];
 
@@ -104,6 +127,15 @@ function update(location) {
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
   text.innerText = location.text;
+
+  
+  const image = document.createElement("img");
+  image.src = location.imageUrl;
+
+  document.getElementById("imageContainer").innerHTML = "";
+  document.getElementById("imageContainer").appendChild(image);
+
+  
 }
 
 function goTown() {
@@ -154,7 +186,7 @@ function sellWeapon() {
     gold += 15;
     goldText.innerText = gold;
     let currentWeapon = inventory.shift();
-    text.innerText = "Vendiste una " + currentWeapon + ".";
+    text.innerText = "Vendiste un(a) " + currentWeapon + ".";
     text.innerText += " En tu equipamento tienes: " + inventory;
   } else {
     text.innerText = "No vendas tu única arma!";
@@ -168,16 +200,32 @@ function fightSlime() {
 
 function fightBeast() {
   fighting = 1;
-  goFight();
+  goFightBeast();
 }
 
 function fightDragon() {
   fighting = 2;
-  goFight();
+  goFightDragon();
 }
 
 function goFight() {
   update(locations[3]);
+  monsterHealth = monsters[fighting].health;
+  monsterStats.style.display = "block";
+  monsterName.innerText = monsters[fighting].name;
+  monsterHealthText.innerText = monsterHealth;
+}
+
+function goFightDragon() {
+  update(locations[8]);
+  monsterHealth = monsters[fighting].health;
+  monsterStats.style.display = "block";
+  monsterName.innerText = monsters[fighting].name;
+  monsterHealthText.innerText = monsterHealth;
+}
+
+function goFightBeast() {
+  update(locations[9]);
   monsterHealth = monsters[fighting].health;
   monsterStats.style.display = "block";
   monsterName.innerText = monsters[fighting].name;
@@ -300,6 +348,3 @@ function pick(guess) {
     text.innerText = "Has agotado tus oportunidades. ¡Mejor suerte la próxima vez!";
   } 
 } 
-
-
-

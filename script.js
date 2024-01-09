@@ -46,70 +46,70 @@ const locations = [
     "button text": ["Ir a la tienda 🏚️", "Ir a la cueva 🏔️", "Ataca al dragon 🐲"],
     "button functions": [goStore, goCave, fightDragon],
     text: "Estas en la plaza 🏛️. Ves un letrero que dice: \"Tienda\".",
-    imageUrl: "/img/square.jpg"
+    imageUrl: "img/square.jpg"
   },
   {
     name: "store",
     "button text": ["Compra 10 salud (10 oro)", "Compra arma (30 oro)", "Ir a la plaza 🏛️"],
     "button functions": [buyHealth, buyWeapon, goTown],
     text: "Entraste a la tienda 🏚️. Compra salud o armas.",
-    imageUrl: "/img/store.jpg"
+    imageUrl: "img/store.jpg"
   },
   {
     name: "cave",
     "button text": ["Ataca al Minotauro 💥", "Ataca al Lagarto 💥", "Ir a la plaza 🏛️"],
     "button functions": [fightSlime, fightBeast, goTown],
     text: "Entraste a la cueva 🏔️. Encontraste varios monstruos 😱🗿🐮.",
-    imageUrl: "/img/cueva.jpg"
+    imageUrl: "img/cueva.jpg"
   },
   {
     name: "fight",
     "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
     "button functions": [attack, dodge, goTown],
     text: "Estas peleando con el Minotauro 🐮 Ten mucho cuidado.",
-    imageUrl: "/img/minotauro.jpg"
+    imageUrl: "img/minotauro.jpg"
   },
   {
     name: "kill monster",
     "button text": ["Ir a la plaza 🏛️", "Ir a la plaza 🏛️", "Ir a la plaza 🏛️"],
     "button functions": [goTown, goTown, easterEgg],
     text: 'El mounstro grita "Aaaaaarg!" y muere☠️. Ganaste puntos de experiencia y encontraste oro 🟡.',
-    imageUrl: "/img/victorious.jpg"
+    imageUrl: "img/victorious.jpg"
   },
   {
     name: "lose",
     "button text": ["REPETIR?", "REPETIR?", "REPETIR?"],
     "button functions": [restart, restart, restart],
     text: "Estás muerto. ☠️",
-    imageUrl: "/img/muerto.jpg"
+    imageUrl: "img/muerto.jpg"
   },
   { 
     name: "win", 
     "button text": ["REPETIR?", "REPETIR?", "REPETIR?"], 
     "button functions": [restart, restart, restart], 
     text: "Mataste al dragón! 🐲☠️ GANASTE EL JUEGO! 🥳🎉🍺🏆💯👑",
-    imageUrl: "/img/ganaste.jpg" 
+    imageUrl: "img/ganaste.jpg" 
   },
   {
     name: "easter egg",
     "button text": ["2", "8", "Ir a la plaza? 🏛️"],
     "button functions": [pickTwo, pickEight, goTown],
     text: "Encontraste un juego secreto 🔐🔑. Elige un número arriba. Serán escogidos al azar 10 numeros entre 0 y 10. Si el número que elegiste coincide con alguno de los numeros al azar, tu ganas! De lo contrario pierdes 10 de salud",
-    imageUrl: "/img/azar.jpg"
+    imageUrl: "img/azar.jpg"
   },
   {
     name: "fight dragon",
     "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
     "button functions": [attack, dodge, goTown],
     text: "Estas peleando con el dragón 🐲 Ten mucho cuidado!",
-    imageUrl: "/img/dragon.jpg"
+    imageUrl: "img/dragon.jpg"
   },
   {
-    name: "fight Lagarto",
+    name: "fight lagarto",
     "button text": ["Ataca 💥", "Esquiva 🕺", "Corre 🏃"],
     "button functions": [attack, dodge, goTown],
     text: "Estas peleando con el Lagarto  Ten mucho cuidado!",
-    imageUrl: "/img/monstruos.jpg"
+    imageUrl: "img/monstruos.jpg"
   }
 ];
 

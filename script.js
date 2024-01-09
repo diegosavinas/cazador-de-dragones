@@ -92,7 +92,7 @@ const locations = [
   },
   {
     name: "easter egg",
-    "button text": ["2", "8", "Ir a la plaza? 🏛️"],
+    "button text": ["Número 2", "Número 8", "Ir a la plaza? 🏛️"],
     "button functions": [pickTwo, pickEight, goTown],
     text: "Encontraste un juego secreto 🔐🔑. Elige un número arriba. Serán escogidos al azar 10 numeros entre 0 y 10. Si el número que elegiste coincide con alguno de los numeros al azar, tu ganas! De lo contrario pierdes 10 de salud",
     imageUrl: "img/azar.jpg"
